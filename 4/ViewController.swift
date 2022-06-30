@@ -78,30 +78,30 @@ class ViewController: UIViewController {
         buttonBuyBeer.createButton(buttonPositionX: 0, buttonPositionY: 370, buttonWidth: 100, buttonHeight: 60, buttonTitle: "Cell Beer")
         buttonBuyBeer.center = self.view.center
         
-        self.view.addSubview(nameLabel)
-        self.view.addSubview(priceLabel)
-        self.view.addSubview(countryLabel)
-        self.view.addSubview(remainingVolumeLabel)
-        self.view.addSubview(beerLabel)
-        self.view.addSubview(buttonBuyBeer)
-        self.view.addSubview(revenueVerificationLabel)
-        self.view.addSubview(checkingRevenueAtTheEndOfTheDayButton)
-        self.view.addSubview(resumeButton)
-        self.view.addSubview(checkingTheBalance)
+        view.addSubview(nameLabel)
+        view.addSubview(priceLabel)
+        view.addSubview(countryLabel)
+        view.addSubview(remainingVolumeLabel)
+        view.addSubview(beerLabel)
+        view.addSubview(buttonBuyBeer)
+        view.addSubview(revenueVerificationLabel)
+        view.addSubview(checkingRevenueAtTheEndOfTheDayButton)
+        view.addSubview(resumeButton)
+        view.addSubview(checkingTheBalance)
     }
     
     @objc func alert() {
         let alertController = UIAlertController(title: "Revenue at the end of the day", message: "Income \(incomeTwo)$", preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(alertAction)
-        self.present(alertController, animated: true, completion: nil)
+        present(alertController, animated: true, completion: nil)
     }
     
     @objc func checkingBalanceAlert() {
         let alertController = UIAlertController(title: "CheckingTheBalance", message: "Balance beer \(beerBotleOne.remainingVolume)l", preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(alertAction)
-        self.present(alertController, animated: true, completion: nil)
+        present(alertController, animated: true, completion: nil)
     }
     
     @objc func cellBeer() {
